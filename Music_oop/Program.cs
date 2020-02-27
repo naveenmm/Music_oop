@@ -18,7 +18,7 @@ namespace Music_oop
                     Console.Write(item+" ");
                 }
                 var obj2 = new Note();
-                obj2.root= Util.Console.Ask("Enter ROOT::");
+                obj2.root= Util.Console.Ask("\nEnter ROOT::");
                 obj2.notes=obj2.Compute(obj2.root.ToUpper(),a);
                 obj2.print();
                 Console.WriteLine("\nContinue(Y/N)");

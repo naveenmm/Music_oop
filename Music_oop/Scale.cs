@@ -9,12 +9,13 @@ namespace Music_oop
     {
         public string root { get; set; }//c,b
         public string[] notes { get; set; }//output
-        public string[] all_notes;//= { "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B" };
+        public string[] all_notes= { "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B" };
         //name :major,minor
         //key 2121121
         public Scale()
         {
-            all_notes = new string[12];
+            //all_notes = new string[12];
+
 
         //root = Util.Console.Ask("Enter root:");
         }
