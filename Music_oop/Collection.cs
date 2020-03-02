@@ -55,22 +55,16 @@ namespace Music_oop
             {                
                 int i = int.Parse(Util.Console.Ask("Scale does not exist::\n1.ADD\n2.Retype"));
                 if (i == 1)
-                {                    
-                    Scales adder = new Scales();
-                    adder.Name = name;                    
-                    string inp_seq = format_convert(Util.Console.Ask("Enter new sequence::").ToLower());
-                    adder.Sequence = long.Parse(inp_seq);
-                    items.Add(adder);
-                    string output = JsonConvert.SerializeObject(items);
-                    File.WriteAllText("scales.json", output);
-                    Console.WriteLine("New Scale added::\n");
-                    sequence_list();
+                {
+                    add_scale(name, items);
                 }
                 else
                 {
+                    int count = 0;
                     foreach (var item in items)
                     {
-                        Console.WriteLine(item.Name);
+                        count++;
+                        Console.WriteLine(count+"."+item.Name);
                     }
                     sequence_list();
                 }
@@ -78,6 +72,20 @@ namespace Music_oop
             //get all scales name and sequence from file
             return items;
         }
+
+        public void add_scale(string name,List<Scales> items)
+        {
+            Scales adder = new Scales();
+            adder.Name = name;
+            string inp_seq = format_convert(Util.Console.Ask("Enter new sequence::").ToLower());
+            adder.Sequence = long.Parse(inp_seq);
+            items.Add(adder);
+            string output = JsonConvert.SerializeObject(items);
+            File.WriteAllText("scales.json", output);
+            Console.WriteLine("New Scale added::\n");
+            sequence_list();
+        }
+
         public int[] sequence_convert(long n)
         {
             int[] seq3 = new int[n.ToString().Length];

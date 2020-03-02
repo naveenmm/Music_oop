@@ -52,11 +52,15 @@ namespace Music_oop
                     for (int k = 0; k < note.Length; k++)
                     {
                         a[k] = all_notes[(i + pos) % 12];
-                        pos = pos + note[k];
-                        if (i < 11)
-                        {
-                            Console.Write(a[k] + " ");
-                        }
+                        pos = pos + note[k];                        
+                    }
+                    if (i < 11)
+                    {
+                        var obj3 = new Note(a);
+                    }
+                    else
+                    {
+                        continue;
                     }
                     Console.WriteLine();
                 }

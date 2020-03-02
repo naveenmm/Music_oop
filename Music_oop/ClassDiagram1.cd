@@ -14,10 +14,10 @@
       <FileName>Note.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Music_oop.Scale">
-    <Position X="2.75" Y="1.75" Width="1.5" />
+  <Class Name="Music_oop.Scale" Collapsed="true">
+    <Position X="2.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEEAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAgAAIAA=</HashCode>
+      <HashCode>AEAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAgAAIAA=</HashCode>
       <FileName>Scale.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -28,10 +28,10 @@
       <FileName>AbsCollection.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Music_oop.Collection">
+  <Class Name="Music_oop.Collection" Collapsed="true">
     <Position X="5.75" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAIACAABAAQAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAEAAAIACAABAAQAAAAAACAAAAAAAAAgAAAAAAAAAQA=</HashCode>
       <FileName>Collection.cs</FileName>
     </TypeIdentifier>
   </Class>
