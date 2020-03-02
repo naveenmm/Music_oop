@@ -12,25 +12,20 @@ namespace Music_oop
         public string[] all_notes= new string[12]; //= { "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B" };
         //name :major,minor
         //key 2121121
+        public Scale(int[] a,string[] note_list)
+        {
+            for (int i = 0; i < 12; i++)
+            {
+                all_notes[i] = note_list[i];
+            }
+            root = Util.Console.Ask("\nEnter ROOT::");
+            notes = Compute(root.ToUpper(), a);
+            var obj3 = new Note(notes);           
+        }
         public Scale()
         {
-            //all_notes = new string[12];            
-            get__notes();
-            //root = Util.Console.Ask("Enter root:");
-        }
 
-        public void get__notes()
-        {
-            string line;
-            int i = 0;
-            System.IO.StreamReader r = new System.IO.StreamReader("notes.txt");
-            while ((line = r.ReadLine()) != null)
-            {                
-                    all_notes[i] = line;
-                i++;
-            }
-            r.Close();
-        }
+        }        
 
         public string[] Compute(string val,int[] note)
         {

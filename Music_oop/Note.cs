@@ -4,17 +4,18 @@ using System.Text;
 
 namespace Music_oop
 {
-    public class Note : Scale
+    public class Note:Scale
     {
-        public Note()
+        public Note(string [] notes)
         {
+            print(notes);
         }
-        public void print()
+        public void print(string [] notes)
         {
-            foreach(var item in notes)
+            foreach (var item in notes)
             {
-                Console.Write(item+" ");
-            }            
-        }       
+                Console.Write(item + " ");
+            }
+        }
     }
 }

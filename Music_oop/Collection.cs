@@ -15,7 +15,13 @@ namespace Music_oop
     }
 
     public class Collection : AbsCollection
-    {
+    {        
+        public Collection()
+        {
+            List<Scales> items = sequence_list();
+            a = getsequence(items, name);
+        }
+        public int[] a;
         public List<Scales> seq_list;
         public int[] getsequence(List<Scales> s,string n)
         {
@@ -143,6 +149,20 @@ namespace Music_oop
             {
                 return s;
             }
+        }
+        public string[] get__notes()
+        {
+            string line;
+            int i = 0;
+            string[] b = new string[12];
+            System.IO.StreamReader r = new System.IO.StreamReader("notes.txt");
+            while ((line = r.ReadLine()) != null)
+            {
+                b[i] = line;
+                i++;
+            }
+            r.Close();
+            return b;
         }
     }
     

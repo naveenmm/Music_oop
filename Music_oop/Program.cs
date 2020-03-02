@@ -10,13 +10,9 @@ namespace Music_oop
             var opt = true;
             while (opt)
             {                
-                var obj = new Collection();
-                List<Scales> items =obj.sequence_list();
-                int[] a=obj.getsequence(items,obj.name);                
-                var obj2 = new Note();
-                obj2.root= Util.Console.Ask("\nEnter ROOT::");
-                obj2.notes=obj2.Compute(obj2.root.ToUpper(),a);
-                obj2.print();
+                var obj = new Collection();                             
+                var obj2 = new Scale(obj.a,obj.get__notes());               
+                
                 Console.WriteLine("\nContinue(Y/N)");
                 if (Console.ReadLine() != "y")
                 {
